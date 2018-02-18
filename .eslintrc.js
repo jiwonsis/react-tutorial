@@ -17,7 +17,12 @@ module.exports = {
         "node": true,
     },
     "rules": {
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "jsx-a11y/anchor-is-valid": [0, {
+            "components": ["Link"],
+            "specialLink": ["hrefLeft", "hrefRight"],
+            "aspects": ["noHref", "invalidHref", "preferButton"]
+        }],
     }
 
 };
